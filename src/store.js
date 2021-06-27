@@ -1,8 +1,10 @@
-import {applyMiddleware, createStore} from "redux";
-import {logger} from "redux-logger/src";
+import {applyMiddleware, createStore ,combineReducers} from "redux";
+import logger from "redux-logger";
 import thunk from "redux-thunk";
-import counterReducer from "./reducers/counterReducer";
+import companyReducer from "./reducers/company";
+import personReducer from "./reducers/person";
+
 
 const middleware = [thunk, logger];
 
-export const store = createStore(counterReducer, applyMiddleware(...middleware));
+export const store = createStore(combineReducers({companyReducer,personReducer}) , applyMiddleware(...middleware));

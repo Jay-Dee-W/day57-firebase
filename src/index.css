@@ -13,47 +13,36 @@
 
 }
 
-.container {
-    min-height: 100vh;
+body {
+    height: 100vh;
+    width: 100vw;
+}
+
+.homepage {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    background: var(--bg-color);
+}
+.Container {
+   border: 1px solid black;
+   margin: 4%;
+   /* width: max-content; */
+   flex : 1
 }
 
-.counter-container {
-    padding: 32px;
-    background: white;
-    border-radius: 8px;
-    box-shadow: var(--shadow-default);
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+.card {
+    border: 1px solid red;
+    margin: 2%;
+    width: 90%;
 }
-
-button.primary {
-    padding: 12px;
-    border: none;
-    border-radius: 4px;
-    background: var(--primary-color);
-    box-shadow: var(--shadow-button);
-    cursor: pointer;
-    font-size: 18px;
-    transition: all 100ms ease;
-    color: var(--bg-color);
+h1 {
+    border-bottom: 1px solid gray;
 }
-
-button.primary:hover {
-    box-shadow: var(--shadow-button-hover);
+form {
+    margin: 2%;
+    position: relative;
 }
-
-button[disabled], button[disabled]:hover {
-    background: white;
-    box-shadow: none;
-    cursor: initial;
-}
-
-p.value {
-    text-align: center;
-    font-size: 32px;
+ input, select {
+    width: 80%;
+} 
+select , button {
+    margin-top: 2%;
 }
